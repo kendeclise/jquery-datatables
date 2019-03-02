@@ -14,3 +14,16 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::group(['prefix'=>'datatables'],function() {
+    //Vistas
+    Route::get('/main', 'ViewController@mainView')->name('view.datatables.main');
+
+    //Respuestas Datatable
+    Route::get('/products-datatable-server-side', 'ProductController@productsDatatableServerSideFormat')->name('datatables.productsDatatableServerSideFormat');
+
+    //Rest adicional
+    Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
+});
+
