@@ -1,6 +1,9 @@
 # jquery-datatables
 Plantilla que muestra diversas formas de uso de la librería jquery-datatables. El backend usa php con el framework laravel 5.6
 
+#### Lista de ejemplos:
+- Datatable con procesamiento en el servidor, con filtros, orden por algunas columnas y eliminación de registros.
+
 #### Instalación:
 - Una vez descargado el repositorio no se olvide de copiar el archivo **.env.example**
  y renombrarlo como **.env**, luego ejecutar los siguientes comandos:
