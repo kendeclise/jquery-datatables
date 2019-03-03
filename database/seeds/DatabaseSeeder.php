@@ -15,8 +15,8 @@ class DatabaseSeeder extends Seeder
         $faker = Faker::create();
         // $this->call(UsersTableSeeder::class);
 
-        //Creamos 7 categorias
-        factory(\App\Category::class)->times(7)->create();
+        //Creamos 25 categorias
+        factory(\App\Category::class)->times(25)->create();
         //Creamos 80 productos
         factory(\App\Product::class)->times(80)->create();
         $productIds = App\Product::pluck('id')->toArray();

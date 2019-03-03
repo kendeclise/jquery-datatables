@@ -18,12 +18,15 @@ Route::get('/', function () {
 
 Route::group(['prefix'=>'datatables'],function() {
     //Vistas
-    Route::get('/main', 'ViewController@mainView')->name('view.datatables.main');
+    Route::get('/basic-backend', 'ViewController@datatableBasicView')->name('view.datatables.basicbackend');
+    Route::get('/server-side', 'ViewController@dataTableServerSideView')->name('view.datatables.serverside');
 
     //Respuestas Datatable
     Route::get('/products-datatable-server-side', 'ProductController@productsDatatableServerSideFormat')->name('datatables.productsDatatableServerSideFormat');
+    Route::get('/categories-basic-datatable', 'CategoryController@categoriesBasicDatatableFormat')->name('datatables.categoriesBasicDatatableFormat');
 
     //Rest adicional
     Route::delete('/products/{id}', 'ProductController@destroy')->name('products.destroy');
+    Route::delete('/categories/{id}', 'CategoryController@destroy')->name('category.destroy');
 });
 

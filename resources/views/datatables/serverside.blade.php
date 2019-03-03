@@ -27,6 +27,7 @@
 </head>
 <body>
     <div class="container mt-3">
+        <h4 style="text-transform: uppercase">Backend (Modo Server-side)</h4>
         <div class="row">
             <div class="col-md-4 offset-md-4">
                 <select id="category-filter" class="form-control">

@@ -7,9 +7,14 @@ use Illuminate\Http\Request;
 
 class ViewController extends Controller
 {
-    public function mainView()
+    public function datatableBasicView()
+    {
+        return view('datatables.basic');
+    }
+
+    public function dataTableServerSideView()
     {
         $categories = Category::orderBy('name')->get();
-        return view('datatables.main', compact('categories'));
+        return view('datatables.serverside', compact('categories'));
     }
 }
